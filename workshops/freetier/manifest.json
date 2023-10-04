@@ -35,6 +35,11 @@
         },
 
         {
+          "title": "Lab 5: (Bonus)  Develop MySQL HeatWave Apps with Oracle APEX",
+          "filename": "../../apex-heatwave/apex-heatwave.md"
+        }, 
+
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common//labs/need-help/need-help-freetier.md"          }
