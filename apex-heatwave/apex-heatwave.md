@@ -67,7 +67,7 @@ Test Rest Enabled
     ```
 2. APEX Visualization App
 
-    ![MDS](./images/apex_store_orders.png "apex rest")
+    ![MDS](./images/world.png "apex rest")
 
 ## Learn More
 
