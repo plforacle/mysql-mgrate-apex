@@ -13,14 +13,12 @@ Using APEX, developers can quickly develop and deploy compelling apps that solve
 - [https://peterobrien.blog/2022/06/15/](https://peterobrien.blog/2022/06/15/)
 - [https://peterobrien.blog/2022/06/15/how-to-use-the-oracle-database-tools-service-to-provide-data-to-apex/](https://peterobrien.blog/2022/06/15/how-to-use-the-oracle-database-tools-service-to-provide-data-to-apex/)
 
-_Estimated Time:_ 30 minutes
+_Estimated Time:_ 15 minutes
 
 ### Objectives
 
 In this lab, you will be guided through the following task:
 
-- Setup Identity and Security tools and services
-- Configure a Private Connection
 - Create and configure an APEX Instance
 - Configure APEX Rest Service
 
@@ -29,135 +27,9 @@ In this lab, you will be guided through the following task:
 - An Oracle Trial or Paid Cloud Account
 - Some Experience with OCI Console
 - Some Experience with Oracle Autonomous and Oracle APEX
-- Completed Lab 8
+- Completed Lab 5
 
-## Task 1 Setup Identity & Security tools in OCI to Create a Secret
-
-1. From the OCI Menu, navigate to **Identity & Security** and click **Vault**
-
-    ![Identity & Security Vault](./images/OCI-menu-vault.png "OCI-menu-vault ")
-
-2. Create a Vault
-
-    a. Click **Create Vault**
-
-    ![Create Vault](./images/create-vault.png "create-vault ")
-
-    b. Select the movies compartment
-
-    c. Give the vault a name
-
-    ```bash
-    <copy> HW-DB </copy>
-    ```
-
-    d. Click **Create Vault**
-
-3. Create a Master Encryption Key
-
-    a. Click on the newly created Vault
-
-    b. Click **Create Key**
-
-    ![Create Master Encryption Key](./images/vault-menu-create-key.png "vault-menu-create-key ")
-
-    c. Select the movies compartment
-
-    d. Give the key a name
-
-    ```bash
-    <copy> HW-DB </copy>
-    ```
-
-    e. Leave the rest configurations in default values
-
-    ![Create Key Details](./images/create-key-details.png "create-key-details ")
-
-    f. Click **Create Key**
-
-4. Create a Secret
-
-    a. Click on **Secrets** to navigate to the secrets panel
-
-    ![Navigate to Secrets Panel](./images/navigate-secret-panel.png =60%x* "navigate-secret-panel ")
-
-    b. Click **Create Secret**
-
-    ![Create Secrets Panel](./images/create-secret-panel.png "create-secret-panel ")
-
-    c. Select the movies compartment
-
-    d. Give the secret a name
-
-    ```bash
-    <copy> HW-DB </copy>
-    ```
-
-    e. Select the created Encryption Key
-
-    f. In **Secret Contents**, write the password for the admin user created for your MySQL HeatWave DB System
-
-    ![Create Secrets details](./images/create-secret-details.png "create-secret-details ")
-
-    g. Leave the rest configurations in default values
-
-    h. Click **Create Secret**
-
-## Task 2 Configure a Private Connection
-
-1. From the OCI Menu, navigate to **Developer Services** and click **Connections**
-
-    ![Developer Services Connections](./images/oci-developer-services-menu-connections.png "oci-developer-services-menu-connections ")
-
-2. Create a Private Endpoint
-
-    a. Navigate to Private Endpoints and click **Create private endpoint**
-
-    ![Create Private Endpoint Panel](./images/create-private-endpoint.png "create-private-endpoint-panel ")
-
-    b. Give the Endpoint a name
-
-    ```bash
-    <copy> HW-MovieHub-endpoint </copy>
-    ```
-
-    c. Select the movies compartment
-
-    d. Select **Enter network information**
-
-    e. Select the **private subnet** from the movies compartment
-
-    ![Create Private Endpoint Details](./images/create-private-endpoint-details.png "create-private-endpoint-details ")
-
-    f. Click **Create**
-
-3. Create a Connection
-
-    a. Navigate to Connections and click **Create connection**
-
-    ![Create Connection Panel](./images/create-connection-panel.png "create-connection-panel ")
-
-    b. Give the Endpoint a name
-
-    ```bash
-    <copy> HW-MovieHub-Connection </copy>
-    ```
-
-    c. Select the movies compartment
-
-    d. Select **Select database** option
-
-    e. Select **MySQL Database** for Database cloud service
-
-    f. Introduce the MySQL DB System created administrator user
-
-    g. Select the created secret that contains the matching mysql password
-
-    ![Create Connection Details](./images/create-connection-details.png "create-connection-details ")
-
-    h. Click **Next** and **Create**
-
-## Task 3 Run SQL Worksheet
+## Task 1 Run SQL Worksheet
 
 1. From the OCI Menu, navigate to **Developer Services** and click **SQL Worksheet**
 
@@ -199,7 +71,7 @@ In this lab, you will be guided through the following task:
 
     e. Save the Endpoint URL for later
 
-## Task 4 Create API Keys
+## Task 2 Create API Keys
 
 1. From the OCI Menu, navigate to **Identity & Security** and click **Domains**
 
@@ -225,7 +97,7 @@ In this lab, you will be guided through the following task:
 
     **Notice the Values for your Username, Tenancy, Region, Fingerprint**
 
-## Task 5 Create and Configure an APEX Instance
+## Task 3 Create and Configure an APEX Instance
 
 1. Create and Launch APEX
 
@@ -254,7 +126,7 @@ In this lab, you will be guided through the following task:
     ![apex logout](./images/apex-logout.png "apex logout")
 
 
-## Task 6 Create APEX Credentials
+## Task 4 Create APEX Credentials
 
 1. Create Web Credentials
 
@@ -282,7 +154,7 @@ In this lab, you will be guided through the following task:
     e. Create new Web Credentials. Click **Create**
     ![apex web credentials ](./images/apex-web-credentials.png "apex web credentials")
 
-## Task 7 Create APEX Rest Service
+## Task 5 Create APEX Rest Service
 
 1. Navigate to the Workspace Utilities from the App Builder Menu
     ![Workspace Utilities](./images/apex-menu-workspace-utilities.png "apex-menu-workspace-utilities ")
@@ -312,8 +184,73 @@ In this lab, you will be guided through the following task:
 
     ![rest services successful connection](./images/rest-service-success.png "rest-service-success ")
 
+## Task 6 Create APEX Application
 
-You may now **proceed to the next lab**
+1. Connect to your APEX Workspace:
+
+    a. Connect to your APEX workspace
+
+    b. Go to App Builder
+
+    ![Connect to APEX , menu](./images/apex-workpace-menu.png "apex-workpace-menu ")
+
+    ![APEX App Builder](./images/apex-app-builder.png "apex-app-builder ")
+
+2. Enter Application Name
+
+    ```bash
+    <copy>World</copy>
+    ```
+
+   ![APEX App Builder](./images/world-application-create.png "world-application-create")
+
+3. Click the **Create Application** button
+
+   ![APEX App Builder](./images/world-application-create-page.png "world-application-create-page")
+
+4. Click the **Create Page** button
+
+   ![APEX App Builder](./images/world-population-create-chart.png "world-population-create-chart")
+
+5. Select the **Chart** component and click the **Next** button
+
+   ![APEX App Builder](./images/world-population-create-pie-chart.png "world-population-create-pie-chart")
+
+6. Select the **Pie Chart** component and click the **Next** button
+
+   ![APEX App Builder](./images/world-population-create-page-sql.png "world-population-create-page-sql")
+
+7. In the **Create Chart** dialog box enter the following values
+    - a. **Chart Name:** Top 5 World Populations
+    - b. **Data Source:** REST Enabled SQL Service
+    - c. **REST Enabled SQL Service** HeatWave
+    - d. **Source Type** SQL Query
+    - e. **Enter a SQL SELECT statement**
+
+        ```bash
+        <copy>SELECT name as country, population  FROM world.country 
+        order by population desc  limit 5;</copy>
+        ```
+
+    - Click the **Next** button
+
+8. In the **Create Chart** dialog box make the following selection
+
+   ![APEX App Builder](./images/world-population-create-define-chart.png "world-population-create-define-chart")
+
+    - a. **Label Column:** country
+    - b. **Value Column:** population
+    - Click the **Create Page** button
+
+9. Click the green **Run** button
+
+   ![APEX App Builder](./images/world-population-signin.png "world-population-signin")
+
+10. In the **Signin** page  enter the workspace username and password
+
+   ![APEX App Builder](./images/world-population-run.png "world-population-run")
+
+This concludes this lab. You may now **proceed to the next lab.**
 
 ## Learn More
 
@@ -328,4 +265,4 @@ You may now **proceed to the next lab**
 
 - **Author** - Cristian Aguilar, MySQL Solution Engineering
 - **Contributors** - Perside Foster, MySQL Principal Solution Engineering
-- **Last Updated By/Date** - Cristian Aguilar, MySQL Solution Engineering, February 2024
+- **Last Updated By/Date** - Perside Foster, MySQL Principal Solution Engineerin, April 2024
