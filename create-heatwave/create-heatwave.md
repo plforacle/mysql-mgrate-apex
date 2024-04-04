@@ -92,6 +92,22 @@ In this lab, you will be guided through the following task:
     <copy>mysqlsh -u <username> -h <private-mysql-ip> -P <portnumber> -p</copy>
     ```
 
+13. After logging into MySQL HeatWave, switch to \sql mode of MySQL Shell and check to see if all your tables were properly loaded
+
+    ```bash
+    <copy>\sql</copy>
+    ```
+
+    ```bash
+    <copy>SHOW SCHEMAS;</copy>
+    ```
+
+    ```bash
+    <copy>SHOW TABLES IN world;</copy>
+    ```
+
+    ![MySQL HW Schema Information](./images/confirm-dump3.png "confirm-dump")
+
 This concludes this lab. You may now **proceed to the next lab.**
 
 ## Acknowledgements
@@ -100,4 +116,4 @@ This concludes this lab. You may now **proceed to the next lab.**
 
 - **Contributors** - Perside Foster, MySQL Solution Engineering
 
-- **Last Updated By/Date** - Ravish Patel, MySQL Solution Engineering, June 2023
+- **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, April 2024
