@@ -43,12 +43,7 @@
           "title": "Lab 6: Develop MySQL HeatWave Apps with Oracle APEX",
           "filename": "../../apex-heatwave/apex-heatwave.md"
         }, 
-        
-        {
-          "title": "Lab 7:  Setup the APEX Application and Workspace",
-          "filename": "../../app-configure-apex/app-configure-apex.md"
-        },
-        
+
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
