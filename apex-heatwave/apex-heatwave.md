@@ -35,7 +35,7 @@ In this lab, you will be guided through the following task:
 
     ![Developer Services SQL Worksheet](./images/OCI-developer-services-sql-worksheets.png "OCI-developer-services-sql-worksheets ")
 
-2. Select the movies compartment and the created **HW-MovieHub-Connection**
+2. elect the root compartment and the created **HW-Connection**
 
 3. You can run SQL queries, in the SQL Worksheet.
 
@@ -104,20 +104,20 @@ In this lab, you will be guided through the following task:
     a.
     ![start apex deploy](./images/start-apex-deploy.png "start apex deploy ")
     ![continue apex deploy](./images/continue-apex-deploy.png "continue apex deploy ")
-    b. Choose movies compartment and set APEX password
+    b. Choose root compartment and set APEX password
     ![set apex password](./images/set-password-apex-deploy.png "set apex password")
     ![completed apex deploy](./images/completed-apex-deploy.png "completed apex deploy")
 
 2. Create Workspace
 
     a.
-    ![login apexd](./images/login-apexd.png "login apexd ")
+    ![login apexd](./images/login-apexd.png "login apex ")
 
     ![create apex workspace](./images/create-apex-workspace.png "create apex workspace" )
     b. Name the APEX workspace
 
     ```bash
-    <copy> heatwave-movies </copy>
+    <copy> heatwave</copy>
     ```
 
     c. Set an Admin user and password for the workspace
@@ -169,7 +169,7 @@ In this lab, you will be guided through the following task:
 4. Give the REST service a name
 
     ```bash
-    <copy> MovieHub-moviesdb </copy>
+    <copy> HeatWave </copy>
     ```
 
 5. For Endpoint URL, Introduce the Endpoint URL **without** the "**`/_/sql`**" at the end. Notice the help message.
@@ -180,7 +180,7 @@ In this lab, you will be guided through the following task:
 
     ![rest services credentials](./images/rest-service-credentials.png "rest-service-credentials ")
 
-8. If previous steps were performed correctly, you should see a successful connection. Select the default database **movies**
+8. If previous steps were performed correctly, you should see a successful connection. Select the default database **world**
 
     ![rest services successful connection](./images/rest-service-success.png "rest-service-success ")
 

@@ -84,7 +84,7 @@ In this lab, you will be guided through the following task:
     <copy> HW-DB </copy>
     ```
 
-    e. Select the the **Manual Encryption Generation** box
+    e. Select the the **Manual secret Generation** box
 
     f. In **Secret Contents**, write the password for the admin user created for your MySQL HeatWave DB System
 
@@ -116,7 +116,7 @@ In this lab, you will be guided through the following task:
 
     d. Select **Enter network information**
 
-    e. Select the **private subnet** from the roo compartment
+    e. Select the **private subnet** from the root compartment
 
     ![Create Private Endpoint Details](./images/create-private-endpoint-details.png "create-private-endpoint-details ")
 
@@ -162,13 +162,12 @@ In this lab, you will be guided through the following task:
 
     ![Connection Select](./images/connection-select.png "Connection Select")
 
-
-3. You can run SQL queries, in the SQL Worksheet.
+4. You can run SQL queries, in the SQL Worksheet.
 
     a. List the schemas
 
     ```bash
-    <copy>show database;</copy>
+    <copy>show databases;</copy>
     ```
 
     ![Connection Run](./images/connection-run.png "Connection Run")

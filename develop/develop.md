@@ -190,7 +190,7 @@ In this lab, you will be guided through the following tasks:
     <copy>sudo nano config.php</copy>
     ```
 
-3. Add the following code to the editor and save the file (ctr + o) (ctl + x)
+3. Add the following code to the editor. Update DB_SERVER with the MySQL DB IP abddress, update the username and password then save the file (ctr + o) (ctl + x)
 
      ```bash
         <copy><?php

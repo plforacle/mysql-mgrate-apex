@@ -77,11 +77,11 @@ In this lab, you will be guided through the following task:
 
     **Note:** it may take MySQL HeatWave a few minutes to be in an "ACTIVE" state
 
-11. Once your MySQL DB System is 'ACTIVE', a “Private IP Address” will be allocated to it, find and copy it. You can find this Private IP under “DB System Information” > “Endpoint” section on the “DB System Details” page
+11. Once your MySQL DB System is 'ACTIVE', a “Private IP Address” will be allocated to it, find and copy it. Click on the name of your MySQL DB System to open the “DB System Details” page and click the "Connections" tab. You can find this Private IP under “Endpoint” section.
 
     ![MySQL DB System Information Section](./images/hw-ip1-new.png "MySQL-IP")
 
-    **Note:** You can find this Private IP under “Endpoint” section on the Connections tab on the “DB System Details” > “MySQL” > “DB Systems”. Click on the name of your MySQL DB System to open the “DB System Details” page.
+    **Note:** 
 
 12. Copy the Private IP Address in the previous Step. You can now login to your MySQL DB System using MySQL Shell from your Compute. Execute
 
