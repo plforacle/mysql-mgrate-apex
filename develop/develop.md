@@ -22,9 +22,63 @@ In this lab, you will be guided through the following tasks:
 - Some Experience with MySQL SQL and  PHP
 - Completed Lab 4
 
-## Task 1: Install App Server (APACHE)
 
-1. If not already connected with SSH, on Command Line, connect to the Compute instance using SSH ... be sure replace the  "private key file"  and the "new compute instance ip"
+
+## Task 1: Configure security list to allow HTTP incoming connections
+
+1. You should be signed in to Oracle Cloud!
+
+    Click **Navigation Menu**,
+
+   ![OCI Navigation Menu](./images/ham-menu-new.png "oci-hamburger-menu")
+
+2. Click  **Networking**, then **Virtual Cloud Networks**  
+    ![OCI Navigation VCN Menu](./images/vcn-menu-new.png "navigate-to-vcn")
+
+3. Once on the Virtual Cloud Networks page, Click on **MySQL-VCN** to open the VCN
+
+    ![OCI VCN Page](./images/vcn-open.png "Open VCN")
+
+4. Click  public **subnet-MySQL-VCN**
+
+    ![OCI VCN Page](./images/vcn-public-subnet.png "Open public subnet")
+
+5. Click Default Security List for **MySQL-VCN**
+
+    ![OCI VCN Page](./images/vcn-default-security.png "Open default security")
+
+6. Click Add Ingress Rules page under Ingress Rule
+
+    Add an Ingress Rule with Source CIDR
+
+    ```bash
+    <copy>0.0.0.0/0</copy>
+    ```
+
+    Destination Port Range
+
+    ```bash
+    <copy>80,443</copy>
+    ```
+
+    Description
+
+    ```bash
+    <copy>Allow HTTP connections</copy>
+    ```
+
+7. Click 'Add Ingress Rule'
+
+    ![OCI VCN Page](./images/vcn-public-port.png "Open VCN")
+
+
+8. On Security List for Default Security List for HEATWAVE-VCN page, the new Ingress Rules will be shown under the Ingress Rules List
+
+    ![View VCN Completed HTTP Ingress rules](./images/vcn-public-port-completed.png "View VCN Completed HTTP Ingress rules")
+
+## Task 2: Install App Server (APACHE)
+
+1. Open OCI Cloud Consloe. If not already connected with SSH, on Command Line, connect to the Compute instance using SSH ... be sure replace the  "private key file"  and the "new compute instance ip"
 
      ```bash
     <copy>ssh -i private_key_file opc@new_compute_instance_ip</copy>
@@ -66,7 +120,7 @@ In this lab, you will be guided through the following tasks:
 
     **Example: http://129.213....**
 
-## Task 2: Install PHP
+## Task 3: Install PHP
 
 1. Install php:
 
@@ -118,7 +172,7 @@ In this lab, you will be guided through the following tasks:
 
    Example: http://129.213.167.../info.php
 
-## Task 3: Create MySQL HeatWave / PHP connect app
+## Task 4: Create MySQL HeatWave / PHP connect app
 
 1. Security update"   set SELinux to allow Apache to connect to MySQL
 
