@@ -21,7 +21,7 @@ In this lab, you will be guided through the following task:
 
 ## Task 1: Set up an OCI MySQL HeatWave system
 
-1. Once the all the dump files have successfully been exported to Object Storage Bucket, in OCI click on the “Hamburger” menu and go to “Databases” > “MySQL”
+1. Once all the dump files have successfully been exported to Object Storage Bucket, in OCI click on the “Hamburger” menu and go to “Databases > MySQL” to  “Databases> MySQL HeatWave>DBSystems”
 
     ![OCI Databases Menu](./images/mysql-nav1-new.png "mysql-nav")
 
@@ -29,18 +29,21 @@ In this lab, you will be guided through the following task:
 
     ![Database Landing Page](./images/create-hw1-new.png "mysql-nav2")
 
-3. Name your MySQL Database System “MySQL-HW”, select "Standalone" and enable “HeatWave”. If you require High Availability for MySQL, you may turn it on after completing Lab 3
+3. Select "Development or testing" and  Name your MySQL Database System “MySQL-HW”, .
+
     ```bash
     <copy>MySQL-HW</copy>
     ```
 
     ![Database Creation Page](./images/create-hw02-new.png "mysql-nav3")
 
-4. Next, create your admin credentials for the MySQL HeatWave system that is being created. Afterwards under “Configure networking”, make sure the “MySQL-VCN” is selected and the Subnet is “Private Subnet”
+4. Next, create your admin credentials for the MySQL HeatWave system that is being created. Make sure the "Standalone" button is selected. Afterwards under “Configure networking”, make sure the “MySQL-VCN” is selected and the Subnet is “Private Subnet”. Under "Configure Hardware" make sure you select "eanable Hardware"
 
     ![Database Creation Page - Admin/Networking Section](./images/hw-priv1-new.png "mysql-nav4")
 
-5. Leave the rest as it is and lastly click on "Show advanced options" under the “Configure Backup Plan” section. After clicking "Show advanced options", click on the "Networking" tab. Under "Hostname", enter the name of your MySQL Database System.
+    ![Database Creation Page - Admin/Networking Section](./images/hw-configure-harware.png "hw-configure-harware.png")
+
+5. Leave the rest as it is and lastly click on "Show advanced options" under the “Configure Backup Plan” section. After clicking "Show advanced options", click on the "click on the “Connections" tab. Under "Hostname", enter the name of your MySQL Database System.
 
     ![Database Creation Page - Advanced Options](./images/show-adv-new.png "show-advanced-options")
 
@@ -78,7 +81,7 @@ In this lab, you will be guided through the following task:
 
     ![MySQL DB System Information Section](./images/hw-ip1-new.png "MySQL-IP")
 
-    **Note:** you can navigate to the “DB System Details” page by going to the “Hamburger” menu in OCI. “Databases” > “MySQL” > “DB Systems”. Click on the name of your MySQL DB System to open the “DB System Details” page.
+    **Note:** You can find this Private IP under “Endpoint” section on the Connections tab on the “DB System Details” > “MySQL” > “DB Systems”. Click on the name of your MySQL DB System to open the “DB System Details” page.
 
 12. Copy the Private IP Address in the previous Step. You can now login to your MySQL DB System using MySQL Shell from your Compute. Execute
 

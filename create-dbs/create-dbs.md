@@ -277,6 +277,10 @@ In this lab, you will be guided through the following tasks:
 
     **Note:** exit MySQL Shell and minimize Cloud Shell afterwards.
 
+    ```bash
+    <copy>\q</copy>
+    ```
+
     This concludes this lab. You may now **proceed to the next lab.**
 
 ## Acknowledgements
