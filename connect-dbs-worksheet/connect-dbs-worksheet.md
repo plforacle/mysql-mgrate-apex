@@ -21,7 +21,6 @@ In this lab, you will be guided through the following task:
 
 - An Oracle Trial or Paid Cloud Account
 - Some Experience with OCI Console
-- Some Experience with Oracle Autonomous and Oracle APEX
 
 ## Task 1 Setup Identity & Security tools in OCI to Create a Secret
 
@@ -120,7 +119,7 @@ In this lab, you will be guided through the following task:
 
     ![Create Private Endpoint Details](./images/create-private-endpoint-details.png "create-private-endpoint-details ")
 
-    f. Click **Create**select “Manual Secret Generation”
+    f. Click **Create**
 
 3. Create a Connection
 
